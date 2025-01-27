@@ -40,3 +40,10 @@ Free:
 - 5 video testimonials : 10mb/vid
 - LLM will filter out the best testimonials
 - Wall of love -> 5 designs 
+
+## Technical approach
+
+Language -> Typescript
+FRONTEND -> REACT + TailwindCSS
+BACKEND -> NODE + EXPRESS
+DATABASE -> MONGODB
