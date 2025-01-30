@@ -1,6 +1,5 @@
 require("dotenv").config()
 import { app } from "./app";
-import { DB_NAME } from "./constants";
 import connectDB from "./db";
 
 connectDB()
@@ -18,4 +17,3 @@ connectDB()
     console.log(`MONGODB connection Fails!!!`, err);
   });
 
-console.log(process.env.PORT, "1");
