@@ -47,3 +47,20 @@ Language -> Typescript
 FRONTEND -> REACT + TailwindCSS
 BACKEND -> NODE + EXPRESS
 DATABASE -> MONGODB
+
+## TASKS
+
+MODELS 
+1. Testimonial collection page
+2. Project/Space 
+3. User Model
+4. Blog Page
+5. Public Link Model
+
+Routes
+
+1. Project API - create,read, update, delete,  => POST, GET, POST, POST
+
+2. testimonial API - Create, read, delete by admin => POST, GET, POST
+
+3. 
