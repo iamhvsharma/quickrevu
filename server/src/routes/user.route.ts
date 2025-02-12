@@ -42,26 +42,25 @@ router.post("/login", async (req, res) => {
       res.status(404).send({
         MSG: "User not found!",
       });
-    } else {
-      const matchPassword = await bcrypt.compare(password, user?.password);
-      if (!matchPassword) {
-        res.status(401).send({
-          MSG: "Invalid credentials!",
-        });
-      } else {
-        const token = jwt.sign(
-          {
-            userId: user._id,
-          },
-          process.env.JWT_SECRET!
-        );
+    }
+    const matchPassword = await bcrypt.compare(password, user?.password!);
+    if (!matchPassword) {
+      res.status(401).send({
+        MSG: "Invalid credentials!",
+      });
+    }
+    if (user && matchPassword) {
+      const token = jwt.sign(
+        {
+          userId: user._id,
+        },
+        process.env.JWT_SECRET!
+      );
 
-        
-        res.status(201).send({
-          MSG: "Login Successful",
-          token: token,
-        });
-      }
+      res.status(201).send({
+        MSG: "Login Successful",
+        token: token,
+      });
     }
   } catch (error) {
     res.status(500).send({

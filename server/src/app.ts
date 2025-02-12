@@ -7,6 +7,6 @@ const app = express();
 app.use(express.json());
 
 // API Call
-app.use("/api/auth", userRoutes);
+app.use("/api/v1/auth", userRoutes);
 
 export { app };
