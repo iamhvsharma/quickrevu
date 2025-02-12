@@ -16,6 +16,10 @@ const projectSchema = new Schema({
     unique: true,
     required: true,
   },
+  projectLimit: {
+    type: Number,
+    default: 1
+  }
 });
 
 const Projects = mongoose.model("Projects", projectSchema);
