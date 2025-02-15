@@ -1,9 +1,24 @@
+// App.css
+
+
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import LandingPage from "./pages/LandingPage"
+
 
 
 function App() {
 
   return (
-    <h1 className='bg-red-600'>Hello there Tailwind installed</h1>
+    <>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/landing" element={<LandingPage />} />
+          
+        
+      </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 
