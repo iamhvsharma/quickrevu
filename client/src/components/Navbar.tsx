@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Navbar = () => {
   return (
     <div className=" p-6 mx-40 my-5 shadow-2xl rounded-2xl">
@@ -13,7 +15,7 @@ const Navbar = () => {
           <span>Blogs</span>
         </div>
         <div className="items-center">
-          <button className="bg-black text-white px-4 py-2 rounded-2xl cursor-pointer">Signup</button>
+          <Button>Signup</Button>
         </div>
       </div>
     </div>
